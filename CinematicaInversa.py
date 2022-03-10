@@ -19,11 +19,13 @@ L3 = int(input('Informe o valor de L3:'))
 
 L = math.sqrt((x1-x0)**2 + (y1-y0)**2)
 
-alpha = math.atan((y1-y0)/(x1-x0))
-theta1 = math.atan((y1-y0)/(x1-x0)) +- (math.acos((L2**2 + L**2 - L3**2))
-theta2 = math.acos((L2**2 + L**2 - (L3**2)))
-phi = math.acos((L2**2 + L**2 - L3**2))
+theta1 = math.atan((y1-y0)/(x1-x0)) +- math.acos((L2**2 + L**2 - L3**2)/(2*L2*L))
+theta2 = math.acos((L**2 + L2**2 - L3**2)/(2*L2*L3))
+alpha =  math.atan((y1-y0)/(x1-x0))
+phi = math.acos((L2**2 + L**2 - L3**2)/(2*L2*L))
+
 beta = 180 - theta2
+
 
 print('"""""""""""""""""""""""""""""""""""')
 print('Valor de L: ',L)
